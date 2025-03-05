@@ -7,5 +7,6 @@ echo 2) About
 echo 3) Exit
 echo.
 set /p choice=Enter the option:
-echo %choice%
+if %choice%==1 echo Game Started
+
 pause
