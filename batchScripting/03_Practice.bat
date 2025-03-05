@@ -1,2 +1,11 @@
 @echo off
-title Let's practice if-else-if statements.
+Title Let's practice if-else-if statements.
+echo Enter an option
+echo.
+echo 1) Start game
+echo 2) About
+echo 3) Exit
+echo.
+set /p choice=Enter the option:
+echo %choice%
+pause
