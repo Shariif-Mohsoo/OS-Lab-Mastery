@@ -6,14 +6,18 @@ echo 1) Start game
 echo 2) About
 echo 3) Exit
 echo.
+:start
 set /p choice=Enter the option:
 if %choice%==1 (
 	echo Game Started
 ) else if %choice%==2 (
 	echo About
 ) else (
-	echo Invalid
-
+	echo.
+	echo Invalid Input
+	echo.
+	cls
+	goto start
 )
 
 pause
