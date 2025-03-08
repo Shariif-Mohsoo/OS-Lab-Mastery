@@ -1,5 +1,5 @@
 @echo off
-Title Practice Purpose
+Title Practice Calculator
 :start
 set /p n1=Enter the first number: 
 set /p n2=Enter the second number: 
@@ -24,6 +24,8 @@ if %choice%==1 (
 	echo.
 	echo Invalid Input
 	echo.	
+	pause
+	cls	
 	goto start
 )
 echo The result is %res%
