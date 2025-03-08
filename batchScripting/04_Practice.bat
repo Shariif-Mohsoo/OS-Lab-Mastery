@@ -1,5 +1,6 @@
 @echo off
 Title Practice Purpose
+:start
 set /p n1=Enter the first number: 
 set /p n2=Enter the second number: 
 
@@ -12,17 +13,19 @@ echo.
 set /p choice=Enter your choice:
 
 if %choice%==1 (
-	echo sum
+	set /a res= n1+n2
 )else if %choice%==2 (
-	echo sub
+	set /a res= n1-n2
 )else if %choice%==3 (
-	echo mul
+	set /a res= n1*n2
 )else if %choice%==4 (
-	echo div
+	set /a res= n1/n2
 )else (
-	echo invalid
+	echo.
+	echo Invalid Input
+	echo.	
+	goto start
 )
+echo The result is %res%
 
-::set /a sum= 
-::echo %sum%
 pause
