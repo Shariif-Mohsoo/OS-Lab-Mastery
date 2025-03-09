@@ -1,10 +1,14 @@
 @echo off
+setlocal enabledelayedexpansion
 Title Practice File
 echo Begin Practice
-::for %%variable in (list) do (code)
-for %%i in (1,2,3,4,5) do (
-	echo.
-	echo Mohsin
-	echo.
+::for /L %%variable in (start,step,end) do (code)
+set num=1
+for /L %%i in (1,1,5) do (
+	::echo %%i
+	for /L %%j in (1,1,%%i) do (
+		set /a num+=1
+		echo %num%
+	)
 )
 pause
