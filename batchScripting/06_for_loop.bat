@@ -1,4 +1,4 @@
 @echo off
 Title Loop with /R switch
-for /R "E:\Scripting" %%A IN (*) Do echo %%A 
+for /R "E:\Scripting" %%A IN (*.bat) Do echo %%A 
 pause
