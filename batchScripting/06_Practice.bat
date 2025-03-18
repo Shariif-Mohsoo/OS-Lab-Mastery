@@ -12,4 +12,8 @@ for /D %%i in (E:\*) do (
 	echo %%i
 )
 
+for /F "tokens=1,2,3,4 delims= " %%i IN (E:\Scripting\batchScripting\weather.txt) do (
+	echo %%i %%j %%k %%l
+)
+
 pause
