@@ -15,7 +15,9 @@ for /L %%i in (1,1,%rows%) do (
 
     REM Loop for stars
     for /L %%j in (1,1,%%i) do (
-        set "line=!line!*"
+        ::set "line=!line!*"
+	::for centralized triangle
+	  set "line=!line! *"
     )
 
     echo !line!
