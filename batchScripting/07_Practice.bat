@@ -1,5 +1,6 @@
 @echo off
 Title Just practice dear.
+start:
 echo ===========================
 echo Enter 1 for add           
 echo Enter 2 for sub           
@@ -21,8 +22,7 @@ if %choice% == 1 (
 ) else if %choice% == 3 (
 	set /a res= n1*n2*n3
 )
-) else if %choice% GEQ 4 else if %choice% LEQ 5 (
-	
+) else if %choice% GEQ 4 if %choice% LEQ 5 (	
 set /p n1= Enter first number:
 set /p n2= Enter second number:
 	if %choice% == 4 (
@@ -30,6 +30,11 @@ set /p n2= Enter second number:
 	) else if %choice% == 5 (
 		set /a res= n1%%n2
 	)
+) else (
+	echo Invalid symbol input must be between 1 and 5
+	goto start
 )
 echo Result is %res%
+set /p option= to continue press 1
+if %option% == 1 goto start
 pause
