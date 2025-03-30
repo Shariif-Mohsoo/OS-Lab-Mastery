@@ -1,6 +1,6 @@
 @echo off
 Title Just practice dear.
-start:
+:start
 echo ===========================
 echo Enter 1 for add           
 echo Enter 2 for sub           
@@ -35,6 +35,9 @@ set /p n2= Enter second number:
 	goto start
 )
 echo Result is %res%
-set /p option= to continue press 1
-if %option% == 1 goto start
+set /p option= to continue press 1: 
+if %option% == 1 (
+	cls 
+	goto start
+)
 pause
