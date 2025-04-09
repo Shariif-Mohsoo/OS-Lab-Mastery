@@ -7,7 +7,7 @@ set person[0].gender= Male
 for /L %%i in (0,1,0) do (
 	call echo First Name: %%person[%%i].fn%% 
 	call echo Last Name: %%person[%%i].ln%%
-	call echo Age= %%person[%%i].age%%
-	call echo Gender= %%person[%%i].gender%%
+	call echo Age: %%person[%%i].age%%
+	call echo Gender: %%person[%%i].gender%%
 )
 pause
