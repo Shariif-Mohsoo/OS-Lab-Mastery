@@ -5,7 +5,7 @@ for ($i = 1; $i -le 50; $i++) {
         Write-Host "$i ➤ Even and Divisible by 5" -ForegroundColor Cyan
     }
     elseif ($i % 5 -eq 0) {
-        Write-Host "$i ➤ Divisible by 5" -ForegroundColor Yellow
+        Write-Host "$i ➤ Divisible by 5" -ForegroundColor Blue
     }
     elseif ($i % 2 -eq 0) {
         Write-Host "$i ➤ Even" -ForegroundColor Green
