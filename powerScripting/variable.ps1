@@ -1,4 +1,6 @@
-$name="Mohsin"
+$fname="Muhammad"
+$lname="Mohsin
 $age=22
-write-host "Name: $name"
+write-host "First-Name: $fname"
+write-host "Last-Name: $lname"
 write-output "Age: $age"
