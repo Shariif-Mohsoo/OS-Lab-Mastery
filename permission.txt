@@ -1,0 +1,43 @@
+📊 Permission Bit Table
+
+Permission	Binary	Octal	Symbolic
+---	000	0	No permission
+--x	001	1	Execute only
+-w-	010	2	Write only
+-wx	011	3	Write + Execute
+r--	100	4	Read only
+r-x	101	5	Read + Execute
+rw-	110	6	Read + Write
+rwx	111	7	Read + Write + Execute
+ 
+SYNTAX: chmod [special][owner][group][others] file
+
+
+🔢 Octal Permission Breakdown: 2 7 1 1
+
+Digit	Meaning
+2	Special bit: setgid (Set Group ID)
+7	Owner permissions: rwx (read, write, execute)
+1	Group permissions: --x (execute only)
+1	Others permissions: --x (execute only)
+When the setgid bit is set on a file, it makes the file run with the group ID of the file owner.
+
+chmod g+s dir  # add setgid to directory
+chmod o-r file # remove read for others
+Total Bits in a File Permission
+3 categories × 3 bits = 9 bits
+
+Example: rwxr-xr-- → binary: 111 101 100 → octal: 754
+
+chmod 3711 file.txt
+This will result in the following file permissions:
+
+Owner: rwx (Read, Write, Execute)
+
+Group: --x (Execute only)
+
+Others: --x (Execute only)
+
+Additionally, because the setuid (1) and setgid (2) bits are set, when the file is executed:
+
+It will run with the owner’s user ID (UID) and group ID (GID), not the user who runs the file.
