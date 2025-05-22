@@ -11,3 +11,15 @@ for(( i=0;i<len;i++ ))
 do
 	echo AT Index $i: ${scores[i]}
 done
+
+#finding the maximum number in an array
+max=0
+for (( i=0;i<len;i++ ))
+do
+	val=${scores[i]}
+	if [ $val -ge $max ]
+	then
+		max=$val
+	fi
+done
+echo Maximum: $max
