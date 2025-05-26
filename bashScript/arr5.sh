@@ -15,4 +15,5 @@ do
 done
 #printing the sum
 echo Sum: $sum
-
+#priting the avg of scores
+echo Average:$((sum/len))
