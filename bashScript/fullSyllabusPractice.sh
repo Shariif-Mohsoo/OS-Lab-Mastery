@@ -9,4 +9,6 @@ echo "Name: $name"
 echo "Enter Name: "
 read name
 echo "Name you enter: $name"
-
+#program to prompt user to add age but in diff style.
+read -p "Enter age: " age
+echo "Age you enter: $age"
