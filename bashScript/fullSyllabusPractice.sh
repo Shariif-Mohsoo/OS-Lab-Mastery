@@ -107,8 +107,38 @@ echo "All elements: ${arr[@]}"
 arr2=(0 1 2 3)
 arr2=(${arr2[@]} ${arr[@]})
 echo "All elements of an array 2: ${arr2[@]}"
-
+echo
 #printing the third pattern
+for (( i=1;i<=age;i++ ))
+do
+	str=""
+	spc=$((age-i))
+	for(( j=1;j<=spc;j++ ))
+	do
+		str+=" "
+	done
+	for(( k=1;k<=i;k++ ))
+	do
+		str+="*"
+	done
+	echo "$str"
+done
 #printing the fourth pattern
+echo
+for (( i=1;i<=age;i++ ))
+do
+	str=""
+	spc=$((age-i))
+	for(( j=1;j<i;j++ ))
+	do
+		str+=" "
+	done
+
+	for(( k=i;k<=age;k++ ))
+	do
+		str+="*"
+	done
+	echo "$str"
+done
 #printing the fifth pattern
 #finding the sum&avg of an array
