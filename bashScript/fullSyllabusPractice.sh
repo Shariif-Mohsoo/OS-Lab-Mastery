@@ -169,4 +169,19 @@ do
 	done
 	echo "$str"
 done
+echo
 #finding the sum&avg of an array
+numsArr=(10 30 40 20 80 50)
+#echo ${numsArr[@]}
+sum=0
+len=${#numsArr[@]}
+for (( i=0;i<len;i++ ))
+do
+	let sum+=${numsArr[i]}
+done
+echo "The sum of an array is $sum"
+echo "Avg of an array is $((sum/len))"
+
+echo
+echo "******Done with syllabus******"
+echo
