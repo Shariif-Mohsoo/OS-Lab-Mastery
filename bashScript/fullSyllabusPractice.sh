@@ -128,7 +128,6 @@ echo
 for (( i=1;i<=age;i++ ))
 do
 	str=""
-	spc=$((age-i))
 	for(( j=1;j<i;j++ ))
 	do
 		str+=" "
@@ -140,5 +139,34 @@ do
 	done
 	echo "$str"
 done
+echo
 #printing the fifth pattern
+for (( i=1;i<=age;i++ ))
+do
+	spc=$((age-i))
+	str=""
+	for(( j=1;j<=spc;j++ ))
+	do
+		str+=" "
+	done
+	for(( k=1;k<=i;k++ ))
+	do
+		str+="* "
+	done
+	echo "$str"
+done
+#printing the sixth pattern
+for (( i=1;i<=age;i++ ))
+do
+	str=""
+	for(( j=1;j<i;j++ ))
+	do
+		str+=" "
+	done
+	for(( k=i;k<=age;k++ ))
+	do
+		str+="* "
+	done
+	echo "$str"
+done
 #finding the sum&avg of an array
