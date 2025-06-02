@@ -35,10 +35,10 @@ do
 	echo "$age time name: $name"
 	let copyAge--
 done
-#program to check whether the age is even or odd.
+#program to check whether the age is prime number or non.
 if [ $age -eq 2 ]
 then
-	echo "$age is even"
+	echo "$age is prime number"
 else
 count=0
 for (( i=2;i<=age;i++ ))
