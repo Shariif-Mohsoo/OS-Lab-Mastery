@@ -1,5 +1,6 @@
 @echo off
 Title Full Syllabus Will Be Covered Here....
+setlocal enabledelayedexpansion
 REM Going to display the hello world
 echo Hello World
 REM How to use the variable
@@ -46,6 +47,46 @@ if %age% LEQ 0 (
 ) else (
 	echo Some sort of an error e.g; Invalid input
 )
-
+REM Next Loops
+REM FIRST WITH /L Plugg/Switch
+for /L %%i in (1,1,10) do (
+	echo %%i
+)
+echo. 
+REM SECOND WITH /D PLUGG/SWITCH (for directories only)
+for /D %%i in (E:/UNI_LEC/*) do (
+	echo %%i
+)
+REM THIRD WITH /F PLUGG/SWITCH (FOR FILES ONLY)
+for /F "tokens=1,2 delims= " %%A in (E:\Scripting\batchScripting\Weather.txt) do (
+	echo %%A %%B
+) 
+REM FOURTH WITH /R PLUGG/SWITCH (FOR FOLDERS AND SUB_FOLDERS)
+for /R "E:\UNI_LEC\" %%A In (*.pptx) do (
+	echo %%A
+)
+REM ARRAY IN BATCH SCRIPTING
+set arr[0]=1
+set arr[1]=2
+set arr[2]=3
+set arr[3]=4
+set arr[4]=5
+set arr[5]=6
+for /L %%i in (0,1,5) do (
+	REM call echo %%arr[%%i]%%
+	echo Array Element at index %%i: !arr[%%i]!
+)
+REM FINDING LENGTH OF AN ARRAY
+set count=0
+:start
+if defined arr[%count%] (
+	set /a count=count+1
+	goto start
+)
+echo Length of an array: !count!
+REM ARRAY ATTRIBUTES
+REM PRINTING THE FIRST PATTERN
+REM PRINTING THE SECOND PATTERN
+REM PRINTING THE THIRD PATTERN
 
 pause
