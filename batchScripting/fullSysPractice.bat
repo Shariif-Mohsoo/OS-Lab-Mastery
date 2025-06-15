@@ -85,8 +85,35 @@ if defined arr[%count%] (
 )
 echo Length of an array: !count!
 REM ARRAY ATTRIBUTES
+set arr[0].n1=10
+set arr[0].n2=20
+set arr[1].n1=30
+set arr[1].n2=40
+
+for /L %%i in (0,1,1) do (
+	echo !arr[%%i].n1! === !arr[%%i].n2!
+)
 REM PRINTING THE FIRST PATTERN
+for /L %%i in (1,1,5) do (
+	set "pat="
+	for /L %%j in (1,1,%%i) do (
+		set "pat=!pat!*"
+	)
+	echo !pat!
+)
 REM PRINTING THE SECOND PATTERN
+set rows=5
+for /L %%i in (1,1,%rows%) do (
+	set /a spc=%rows% - %%i
+	set "pat="
+	for /L %%j in (1,1,!spc!) do (
+		set "pat=!pat! "
+	)
+	for /L %%k in (1,1,%%i) do (
+		set "pat=!pat! *"
+	)
+	echo !pat!
+)
 REM PRINTING THE THIRD PATTERN
 
 pause
